@@ -2,12 +2,12 @@ package org.calling;
 
 import java.time.Duration;
 
-public class RegularPolicy extends BasicRatePolicy {
-    private final Money amount;
-    private final Duration seconds;
+public class FixedFeePolicy extends BasicRatePolicy {
+    private Money amount;
+    private Duration seconds;
 
     //abstract class no 생성자, no super()
-    public RegularPolicy(Money amount, Duration seconds) {
+    public FixedFeePolicy(Money amount, Duration seconds) {
         this.amount  = amount;
         this.seconds = seconds;
     }

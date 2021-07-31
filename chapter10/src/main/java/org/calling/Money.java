@@ -29,7 +29,8 @@ public class Money {
     }
 
     public Money times(double percent) {
-        return new Money(this.amount.multiply(BigDecimal.valueOf(percent)));
+        return new Money(this.amount.multiply(
+                BigDecimal.valueOf(percent)));
     }
 
     public boolean equals(Object object) {

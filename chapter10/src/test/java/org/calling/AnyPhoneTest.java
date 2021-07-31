@@ -13,7 +13,7 @@ public class AnyPhoneTest {
 //        LocalDateTime from = LocalDateTime.of(2021,1,1,1,1,10);
 //        LocalDateTime to = LocalDateTime.of(2021,1,1,1,1,30);
 
-        AnyPhone anyPhone = new AnyPhone(new RegularPolicy(Money.wons(3000), Duration.ofSeconds(60)));
+        AnyPhone anyPhone = new AnyPhone(new FixedFeePolicy(Money.wons(3000), Duration.ofSeconds(60)));
         assertThat(anyPhone.calculateFee()).isEqualTo(Money.wons(0));
     }
 

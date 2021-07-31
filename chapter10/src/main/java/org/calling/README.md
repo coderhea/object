@@ -1,4 +1,6 @@
 ## INIT
+#10 상속과 코드 재사용
+## p310 중복과 변경
 NightPhone은 Phone에 강하게 결합되어 있다. 
 List<PhoneCall> 의 추가가 Phone에서만 존재
 코드 중복을 해결하기 위해 추상화에 의존한다 
@@ -46,7 +48,7 @@ NightPhone : 심야 할인 요금제 통화 한 건 계산 방식 변경 시 변
 추상클래스 Phone에 taxRate인스턴스 변수 추가, 공통 calculateFee()에 for문 후 최후 taxRate() 부과
 인스터스 변수가 추가되었기에, 자식클래스의 초기화 로직 추가 필요
 
-# 합성과 유연한 설계 
+#11 합성과 유연한 설계 
 상속은 부모 / 자식 클래스의 의존성이 compile 타임에 해결되지만 
 합성은 run타임에 해결된다. 상속은 is-a관계(부모 코드 재사용)이고 합성은 has-a관계(부분 객체 코드 재사용)이다
 즉 상속은 부모의 내부구현을 상세히 알아야 하므로, 결합도가 높아진다. 객체 합성 >> 클래스 상속 
@@ -121,3 +123,25 @@ Implements 가 아닌 아예 생성 시점에 참조!
 즉 생성자에 RatePolicy 인스턴스를 인자로 받아, 의존성을 주입 
 
 ## p376 기본 정책과 부가 정책 합성하기
+
+#14 일관성 있는 협력 
+
+## p471 기본 정책 확장
+  고정요금방식 (#11의 일반 요금제), 시간대별 방식(#11의 심야할인 요금제), 요일별 방식, 구간별 방식(누진)
+
+## p473 고정요금방식 구현하기     
+  RegularPolicy -> FixedFeePolicy 클래스명 바꾸기
+
+## p474 시간대별 방식 구현하기
+  시간대별 : 일자/시간 분할 필요
+  TimeOfDayDiscountPolicy -- splitByDay() --> Call -- splitByDay() -> DateTimeInterval
+  => TimeOfDayDiscountPolicy는 통화기간 아는 Call에게 일자별 통화기간 분리 요청 
+  => Call은 이 요청, 기간을 저장하고 있는 DateTimeInterval (split(days))에게 위임
+  TimeOfDayDiscountPolicy from(interval), to(interval) 
+  => DateTimeInterval(곧 Call)이 반환한 '날짜별 분할 기간 <List>' for문 돌리며 시간대별 기준 from, to 얻음
+
+  
+  
+  
+  
+  
