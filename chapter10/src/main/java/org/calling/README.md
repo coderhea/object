@@ -139,8 +139,10 @@ Implements 가 아닌 아예 생성 시점에 참조!
   => Call은 이 요청, 기간을 저장하고 있는 DateTimeInterval (split(days))에게 위임
   TimeOfDayDiscountPolicy from(interval), to(interval) 
   => DateTimeInterval(곧 Call)이 반환한 '날짜별 분할 기간 <List>' for문 돌리며 시간대별 기준 from, to 얻음
-
-  
+ 
+ ## p483 요일별 방식 구현하기
+  7개 요일 list보다는 DayOfWeekDiscountRule 클래스 선언
+  DiscountPolicy는 DayOfWeekDiscountRule 차용, 시간대별 방식
   
   
   
