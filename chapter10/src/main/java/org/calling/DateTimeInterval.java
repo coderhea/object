@@ -53,7 +53,7 @@ public class DateTimeInterval {
     }
 
     public List<DateTimeInterval> splitByDay() {
-        if (days() > 1) {
+        if (days() > 0) {
             return split(days());
         }
         return Arrays.asList(this); //days = 1 just List with single interval

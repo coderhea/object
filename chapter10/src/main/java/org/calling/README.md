@@ -165,7 +165,10 @@ Implements 가 아닌 아예 생성 시점에 참조!
  FeeRule은 1개의 Call 요금 계산 책임 수행 
  통화시간  각'규칙'의 '적용조건' 만족 구간으로 "분리"  : FeeCondition 에 위임 
  + 각 분리구간에 '단위요금 적용'                  : FeeRule에 위임 (그 feePerDuration)
- intervals = findTimeIntervals(call) 1 v 1 FeeCondition (추상화)
-  
-  
+ intervals = findTimeIntervals(call) 1 v 1 FeeCondition (INTERFACE 즉 추상화)
+   
+ ## p502 추상화 수준에서 협력 패턴 구현하기 
+ FeeCondition // call 인자 통화기간 중 '적용 조건' 만족 기간 구한 후 List에 담아 반환
+ FeeRule // calculateFee(call), FeeCondition에게 findTimeIntervals(call)로
+           조건 만족 시간 목록 반환 받은 것에 + feePerDuration 단위요금 값 이용 요금 계산
   
