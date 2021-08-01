@@ -11,8 +11,8 @@
 NO 상속 (인스턴스 변수 taxRate을 부모한테 추가해서 자식까지 super(); 생성으로 영향미치는 것)
 YES 합성 (부모 클래스는 자신의 추상 메서드 호출, 자식은 이 메서드 @Override) 
 
-훅 Hook Method 편의상 기본 구현(abstract 제외 일반 메서드처럼 구현) 제공, 동일 구현이면 @Override불필요
-```
+훅  Hook Method 편의상 기본 구현(abstract 제외 일반 메서드처럼 구현) 제공, 동일 구현이면 @Override불필요
+``` 
 //현재의 RegularPhone, NightDiscountPhone 모두 
  사후 부가세 없어서 어차피 fee 그대로 반환 예정 
 
