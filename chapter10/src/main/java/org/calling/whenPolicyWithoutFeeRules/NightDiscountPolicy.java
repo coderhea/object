@@ -1,4 +1,6 @@
-package org.calling;
+package org.calling.whenPolicyWithoutFeeRules;
+
+import org.calling.Money;
 
 import java.time.Duration;
 
@@ -17,12 +19,12 @@ public class NightDiscountPolicy extends BasicRatePolicy {
         this.seconds = seconds;
     }
 
-    @Override
-    protected Money calculateCallFee(PhoneCall call) {
-        if (call.getFrom().getHour() >= LATE_NIGHT_HOUR) {
-            return nightlyAmount.times(call.getDuration().getSeconds() / seconds.getSeconds());
-        } else {
-            return regularAmount.times(call.getDuration().getSeconds() / seconds.getSeconds());
-        }
-    }
+//    @Override
+//    protected Money calculateCallFee(PhoneCall call) {
+//        if (call.getFrom().getHour() >= LATE_NIGHT_HOUR) {
+//            return nightlyAmount.times(call.getDuration().getSeconds() / seconds.getSeconds());
+//        } else {
+//            return regularAmount.times(call.getDuration().getSeconds() / seconds.getSeconds());
+//        }
+//    }
 }

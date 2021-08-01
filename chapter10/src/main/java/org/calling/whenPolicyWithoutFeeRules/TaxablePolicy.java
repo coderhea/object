@@ -1,4 +1,6 @@
-package org.calling;
+package org.calling.whenPolicyWithoutFeeRules;
+
+import org.calling.Money;
 
 public class TaxablePolicy extends AdditionalRatePolicy {
     private double taxRatio;

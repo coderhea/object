@@ -1,5 +1,7 @@
 package org.calling;
 
+import org.calling.whenPolicyWithoutFeeRules.DateTimeInterval;
+
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.List;

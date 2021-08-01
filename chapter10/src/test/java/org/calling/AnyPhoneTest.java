@@ -1,6 +1,6 @@
 package org.calling;
 
-import org.calling.whenPolicyWithoutFeeRules.FixedFeePolicy;
+import org.calling.whenPolicyWithoutFeeRules.*;
 import org.junit.jupiter.api.Test;
 
 import java.time.Duration;

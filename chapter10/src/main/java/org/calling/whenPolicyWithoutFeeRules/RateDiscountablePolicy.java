@@ -1,6 +1,8 @@
-package org.calling;
+package org.calling.whenPolicyWithoutFeeRules;
 
-public class RateDiscountablePolicy extends AdditionalRatePolicy{
+import org.calling.Money;
+
+public class RateDiscountablePolicy extends AdditionalRatePolicy {
     private final Money discountAmount;
 
     //super() abstract 부모 생성자 + Money 변수 (tax double과 무관)

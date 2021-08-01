@@ -33,6 +33,14 @@ public class Money {
                 BigDecimal.valueOf(percent)));
     }
 
+    public boolean isGreaterThanOrEqual(Money other) {
+        return amount.compareTo(other.amount) >= 0;
+    }
+
+    public boolean isLessThan(Money other) {
+        return amount.compareTo(other.amount) < 0;
+    }
+
     public boolean equals(Object object) {
         if (this == object) {
             return true;
@@ -53,4 +61,6 @@ public class Money {
     public String toString() {
         return amount.toString() + "원";
     }
+
+
 }

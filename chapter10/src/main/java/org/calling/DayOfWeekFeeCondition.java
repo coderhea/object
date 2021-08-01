@@ -1,5 +1,7 @@
 package org.calling;
 
+import org.calling.whenPolicyWithoutFeeRules.DateTimeInterval;
+
 import java.time.DayOfWeek;
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,5 +1,7 @@
 package org.calling;
 
+import org.calling.whenPolicyWithoutFeeRules.DateTimeInterval;
+
 import java.time.Duration;
 
 public class FeePerDuration {

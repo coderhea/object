@@ -1,4 +1,4 @@
-package org.calling;
+package org.calling.whenPolicyWithoutFeeRules;
 
 import java.time.*;
 import java.util.ArrayList;

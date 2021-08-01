@@ -1,6 +1,5 @@
 package org.calling.whenPolicyWithoutFeeRules;
 
-import org.calling.BasicRatePolicy;
 import org.calling.Money;
 import org.calling.PhoneCall;
 
