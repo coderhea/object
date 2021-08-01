@@ -46,6 +46,6 @@
  FeeRule // calculateFee(call), FeeCondition에게 findTimeIntervals(call)로
            조건 만족 시간 목록 반환 받은 것에 + feePerDuration 단위요금 값 이용 요금 계산
   
-  ** reduce map stream api 
+  ** reduce map stream api  
  ## p505 구체적인 협력 구현하기(서브클래싱)
  DurationFeeCondition, FixedFeeCondition, TimeOfDayFeeCondition
