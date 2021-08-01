@@ -1,4 +1,7 @@
-package org.calling;
+package org.calling.whenPolicyWithoutFeeRules;
+
+import org.calling.DateTimeInterval;
+import org.calling.Money;
 
 import java.time.DayOfWeek;
 import java.time.Duration;

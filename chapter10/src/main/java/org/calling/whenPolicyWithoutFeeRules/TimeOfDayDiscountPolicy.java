@@ -1,4 +1,9 @@
-package org.calling;
+package org.calling.whenPolicyWithoutFeeRules;
+
+import org.calling.BasicRatePolicy;
+import org.calling.DateTimeInterval;
+import org.calling.Money;
+import org.calling.PhoneCall;
 
 import java.time.Duration;
 import java.time.LocalTime;
@@ -12,7 +17,7 @@ public class TimeOfDayDiscountPolicy extends BasicRatePolicy {
     private List<Money> amounts = new ArrayList<>();
 
 
-    @Override
+    //@Override
     protected Money calculateCallFee(PhoneCall call) {
         Money result = Money.ZERO;
         for (DateTimeInterval interval : call.splitByDay()) {

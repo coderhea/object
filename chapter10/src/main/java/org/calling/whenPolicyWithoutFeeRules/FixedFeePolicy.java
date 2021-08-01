@@ -1,4 +1,8 @@
-package org.calling;
+package org.calling.whenPolicyWithoutFeeRules;
+
+import org.calling.BasicRatePolicy;
+import org.calling.Money;
+import org.calling.PhoneCall;
 
 import java.time.Duration;
 
@@ -13,7 +17,7 @@ public class FixedFeePolicy extends BasicRatePolicy {
     }
 
     //RegularPhone의 calculateCallFee() 코드 차용
-    @Override
+    //@Override
     protected Money calculateCallFee(PhoneCall call) {
         return amount.times(call.getDuration().getSeconds() / seconds.getSeconds());
     }
